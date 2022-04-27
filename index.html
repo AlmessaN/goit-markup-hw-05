@@ -47,7 +47,14 @@
         <section class="button-use">
             <div class="container">
                 <h1 class="title">ЕФЕКТИВНІ ПОРАДИ ДЛЯ<br>ВАШОГО БІЗНЕСУ</h1>
-                <button class="button" type="button">Замов. послугу</button>
+                <button data-modal-open class="button" type="button">Замов. послугу</button>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                    <button data-modal-close class="ellise-cross">                    
+                        <svg class="cross">
+                        <use href="./images/icons.svg#icon-Vector"></use></svg></button>
+                    </div>
+            </div>
             </div>
         </section>
             <section class="section">
@@ -88,16 +95,25 @@
                     <img src="images/programer-desk-office.jpg" 
                     alt="програміст за робочим столом" 
                     width="370">
+                    <div class="images-before">
+                        <h3 class="title-images">ДЕСКТОПНІ ЗАСТОСУНКИ</h3>
+                    </div>
                 </li>
                 <li class="images">
                     <img src="images/web-ui-designers-smartphone.jpg" 
                     alt="веб-дизайнери розробляють додаток смартфону" 
                     width="370">
+                    <div class="images-before">
+                        <h3 class="title-images">МОБІЛЬНІ ЗАСТОСУНКИ</h3>
+                    </div>
                 </li>
                 <li class="images">
                     <img src="images/web-design-colour.jpg" 
                     alt="веб-дизайней вибирає колір планшету" 
                     width="370">
+                    <div class="images-before">
+                        <h3 class="title-images">ДИЗАЙНЕРСЬКЕ ВИРІШЕННЯ</h3>
+                    </div>
                 </li>
                 </ul>
             </section>
@@ -281,5 +297,6 @@
         </li>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
     </body>
 </html>
