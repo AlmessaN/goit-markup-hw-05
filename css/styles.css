@@ -330,6 +330,7 @@ ul {
     width: 376px;
   }
   .images {
+    position: relative;
     margin-right: 30px;
   }
   .images:last-child {
