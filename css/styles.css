@@ -29,14 +29,9 @@ ul {
   }
   /* Header */
   .hero {
+    display: flex;
+    align-items: center;
     width: 1200px;
-    text-align: center;
-    margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .hero_ {
-    text-align: center;
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
@@ -55,6 +50,7 @@ ul {
     font-size: 14px;
     line-height: 1.17;
     word-spacing: 50px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-link.current::after {
     display: block;
@@ -65,6 +61,7 @@ ul {
     margin-top: 28px;
     border-radius: 2px;
     content: "";
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .current {
     color:#2196F3;
@@ -81,10 +78,15 @@ ul {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .hero nav {
-    display: inline-flex;
+    display: flex;
   }
   .hero_ nav {
-    display: inline-flex;
+    display: flex;
+  }
+  .adresat {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
   }
   .studio {
   font-family: 'Raleway', sans-serif;
@@ -114,21 +116,24 @@ ul {
   margin-right: 0;
 }
 .mail {
+  display: flex;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  width: 135px;
   color: #757575;
   font-size: 14px;
   line-height: 1.17;
   text-decoration: none;
-  margin-left: 305px;
-  margin-right: 30px;
+  margin-right: 50px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail:hover {
   color: #2196F3;
 }
 .mail:focus {
   color: #2196F3;
+}
+.mail_icon {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail:hover .mail_icon {
   fill: #2196F3;
@@ -145,9 +150,13 @@ ul {
   font-size: 14px;
   line-height: 1.17;
   text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tel:hover {
   color: #2196F3;
+}
+.tel_icon {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tel:hover .tel_icon {
   fill: #2196F3;
@@ -223,6 +232,7 @@ ul {
     letter-spacing: 0.03em;
     border-radius: 4px;
     padding: 6px 22px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .button_chapters:hover {
     background: #2196F3;
@@ -249,11 +259,15 @@ ul {
     padding-right: 15px;
   }
   .photo {
+    display: flex;
     margin-top: 50px;
   }
-  .container_second li {
-    display: inline-block;
-    float: left;
+
+  .details {
+    display: flex;
+    justify-content: center;
+  }
+  .detail {
     margin-right: 30px;
   }
   .container_second li:last-child {
@@ -316,7 +330,6 @@ ul {
     width: 376px;
   }
   .images {
-    position: relative;
     margin-right: 30px;
   }
   .images:last-child {
@@ -448,6 +461,7 @@ ul {
     letter-spacing: 0.03em;
     color: #FFFFFF;
     padding: 63px 24px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .images_link:hover .text_port{
     transform: translateY(0);
@@ -588,6 +602,7 @@ ul {
   background-color: #F5F4FA;
   height: 120px;
   margin-bottom: 30px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social_links {
   display: flex;
@@ -596,6 +611,7 @@ ul {
   width: 206px;
   height: 44px;
   margin: 16px 32px 30px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ellipse {
   text-align: center;
@@ -603,6 +619,7 @@ ul {
   height: 44px;
   border-radius: 50px/50px;
   margin-right: 10px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ellipse:last-child {
   margin-right: 0;
@@ -689,6 +706,8 @@ ul {
   fill:#FFFFFF;
 }
 .client_ {
+  justify-content: center;
+  display: flex;
   margin-top: 50px;
 }
 .client {
@@ -700,6 +719,7 @@ ul {
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client:hover {
   border-color: #2196F3;
@@ -722,6 +742,7 @@ ul {
   width: 106px;
   height: 60px;
   fill:#AFB1B8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client_icon:hover {
   fill:#2196F3;
@@ -760,6 +781,7 @@ ul {
   height: 44px;
   border-radius: 50px/50px;
   margin-right: 10px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ellipse-footer:hover {
   background-color: #2196F3;
@@ -799,7 +821,7 @@ ul {
 }
 .backdrop {
   position: fixed;
-  width: 1600px;
+  width: 100%;
   height: 1024px;
   left: 50%;
   top: 50%;
@@ -817,7 +839,7 @@ height: 581px;
 left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
-background: #FFFFFF;
+background-color: #FFFFFF;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 }
@@ -835,4 +857,7 @@ border-radius: 4px;
   fill: #000000;
   width: 11px;
   height: 11px;
+}
+.footer_end {
+  display: flex;
 }
